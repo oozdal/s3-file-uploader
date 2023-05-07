@@ -10,15 +10,15 @@ setup_requirements = []
 test_requirements = []
 
 setuptools.setup(
-    name="geods-client-api",
+    name="s3-file-uploader",
     version=__version__,
-    author="Ozer Ozdal",
-    author_email="ozer.ozdal@goldspot.ca",
-    description="API for GeoDS clients",
+    author="Ozer, Ozge and Tugrul",
+    author_email="deliyurek_22@hotmail.com",
+    description="API to upload files to AWS S3",
     long_description=long_description,
-    url="https://github.com/GoldspotDiscoveries/geods-client-api",
+    url="https://github.com/oozdal/s3-file-uploader",
     project_urls={
-        "Bug Tracker": "https://github.com/GoldspotDiscoveries/geods-client-api/issues",
+        "Bug Tracker": "https://github.com/oozdal/s3-file-uploader/issues",
     },
     classifiers=[
         "Programming Language :: Python :: 3",
