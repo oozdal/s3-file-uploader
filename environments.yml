@@ -1,4 +1,4 @@
-name: geods-client-api
+name: s3-file-uploader
 channels:
   - anaconda
   - conda-forge
