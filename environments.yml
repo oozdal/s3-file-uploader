@@ -1,0 +1,12 @@
+name: geods-client-api
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - boto3=1.26.115
+  - django=4.2
+  - pillow=9.5.0
+  - pip=22.3.1
+  - pip:
+    - django-storages==1.13.0
