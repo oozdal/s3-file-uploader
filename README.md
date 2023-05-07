@@ -41,7 +41,7 @@ http://[public_host_here]:8000/category/Gravity/
 
 ## Installation (For s3-file-uploader developers)
 
-1)```git clone https://github.com/GoldspotDiscoveries/geods-client-api.git```
+1)```git clone https://github.com/oozdal/s3-file-uploader.git```
 
 2)```conda env create --name "s3-file-uploader" --file environments.yml```
 
