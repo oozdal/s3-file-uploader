@@ -1,15 +1,16 @@
-# geods-client-api
-This API is primarily designed for clients to upload their data to goldspot-geods S3 bucket securely.
+# s3-file-uploader
 
-## Test geods-client-api on behalf of clients
+This API is primarily designed for people to upload their data to the given S3 bucket securely.
 
-Click http://34.239.113.227:8000/admin  (Make sure that you type http, not https)
+## Test s3-file-uploader
 
-Assume that you are the client Minto and you are provided the username and password below.
+Click http://[public_host_here]:8000/admin  (Make sure that you type http, not https)
 
-Now you can send your files to our S3 bucket (See the next section: Usage)
+Assume that you are Muzaffer (a client) and you are provided the username and password below.
 
-Username: ```minto```
+Now you can send your files to the AWS S3 bucket (See the next section: Usage)
+
+Username: ```muzo```
 
 Password: ```GzXLEUEE```
 
@@ -27,44 +28,44 @@ Once you login Django administration,
 
 4) Select the file you want to upload and then click ```Save```
 
-5) You can see all the files you have uploaded by clicking the link http://34.239.113.227:8000/
+5) You can see all the files you have uploaded by clicking the link http://[public_host_here]:8000/
  
 You may also click categories and see the uploaded input layers per category. For instance,
 
-http://34.239.113.227:8000/category/Magnetics/
+http://[public_host_here]:8000/category/Magnetics/
 
-http://34.239.113.227:8000/category/Gravity/
+http://[public_host_here]:8000/category/Gravity/
 
-6) Open your AWS console and check if you can see your file in ```s3://goldspot-geods/static/blog_images/```
+6) Open your AWS console and check if you can see your file in ```s3://[bucket_name_here]/static/blog_images/```
 
 
-## Installation (For geods-client-api developers)
+## Installation (For s3-file-uploader developers)
 
-1)```git clone https://github.com/GoldspotDiscoveries/geods-client-api.git```
+1)```git clone https://github.com/oozdal/s3-file-uploader.git```
 
-2)```conda env create --name "geods-client-api" --file environments.yml```
+2)```conda env create --name "s3-file-uploader" --file environments.yml```
 
-3)```conda activate geods-client-api```
+3)```conda activate s3-file-uploader```
 
 4)```python setup.py install``` (Optional)
 
-5)```python src/geods-client-api/manage.py migrate```
+5)```python src/s3-file-uploader/manage.py migrate```
 
-6)```winpty python src/geods-client-api/manage.py createsuperuser --username SET_A_USERNAME_FOR_YOURSELF```
+6)```winpty python src/s3-file-uploader/manage.py createsuperuser --username SET_A_USERNAME_FOR_YOURSELF```
 
-7)```python src/geods-client-api/manage.py runserver```
+7)```python src/s3-file-uploader/manage.py runserver```
 
 8)Click http://127.0.0.1:8000/admin and use the username and password you created in Step 6
 
 IMPORTANT: If you are NOT a Windows user, just type the following line in Step 6 (without winpty):
 
-```python src/geods-client-api/manage.py createsuperuser --username SET_A_USERNAME_FOR_YOURSELF```
+```python src/s3-file-uploader/manage.py createsuperuser --username SET_A_USERNAME_FOR_YOURSELF```
 
 ## Installation (For Docker users)
 
-1) ```docker pull ghcr.io/goldspotdiscoveries/geods-client-api:latest```
-2) ```docker run --publish 8000:8000 ghcr.io/goldspotdiscoveries/geods-client-api```
-3) Click http://127.0.0.1:8000/admin and login using your username and password provided by admin (Contact Ozer)
+1) ```docker pull ghcr.io/oozdal/s3-file-uploader:latest```
+2) ```docker run --publish 8000:8000 ghcr.io/oozdal/s3-file-uploader```
+3) Click http://127.0.0.1:8000/admin and login using your username and password provided by admin
 
 
 
@@ -82,7 +83,7 @@ Q2: I cannot pull the image from ghcr as I get access denied. What should I do?
 
 A2: First you should login Github Container Registry securely using your github username and token. 
 
-```docker login ghcr.io --username $YOUR_GITHUB_USERNAME``` and then enter your github token
+```docker login ghcr.io --username $YOUR_GITHUB_USERNAME``` and then enter your github developer token
 
 ## Contributing
 
@@ -90,4 +91,4 @@ Interested in contributing? Check out the contributing guidelines. TO DO.
 
 ## License
 
-```geods-client-api``` is created by Ozer Ozdal. It is licensed under the terms of the MIT license.
+```s3-file-uploader``` is created by Muzaffer and his friends. It is licensed under the terms of the MIT license.
