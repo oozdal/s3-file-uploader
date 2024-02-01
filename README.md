@@ -91,4 +91,4 @@ Interested in contributing? Check out the contributing guidelines. TO DO.
 
 ## License
 
-```s3-file-uploader``` is created by Muzaffer and his friends. It is licensed under the terms of the MIT license.
+```s3-file-uploader``` is created by Ozer Ozdal. It is licensed under the terms of the MIT license.
